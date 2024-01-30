@@ -1,4 +1,4 @@
-# gifs-app
+# GifsApp
 
 GifsApp: A web application built with Angular that allows users to search for GIFs and save their search history.
 
