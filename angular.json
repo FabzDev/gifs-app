@@ -1,15 +1,21 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "cli": {
-    "packageManager": "npm",
-    "analytics": "2964af53-1346-4c1e-9972-563325c3baaf"
-  },
   "newProjectRoot": "projects",
   "projects": {
-    "03-gifs-app": {
+    "test": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/03-gifs-app",
+            "outputPath": "dist/test",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -61,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "03-gifs-app:build:production"
+              "buildTarget": "test:build:production"
             },
             "development": {
-              "buildTarget": "03-gifs-app:build:development"
+              "buildTarget": "test:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "03-gifs-app:build"
+            "buildTarget": "test:build"
           }
         },
         "test": {
@@ -95,5 +101,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "8aebe636-9759-4844-a4b2-2f9df420c3e0"
   }
 }
