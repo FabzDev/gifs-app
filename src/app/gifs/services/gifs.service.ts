@@ -1,22 +1,22 @@
 import { Injectable } from '@angular/core';
 
-// @Injectable({providedIn: 'root'})
-// export class GifsService {
+@Injectable({providedIn: 'root'})
+export class GifsService {
 
-//   private _tagHistory: string[] =[]
+  private _tagHistory: string[] =[]
 
-//   constructor() { }
+  constructor() { }
 
-//   get tagHistory(){
-//     return [...this._tagHistory]
-//   }
+  get tagHistory(){
+    return [...this._tagHistory]
+  }
 
-//   searchTag( tag:string ):void {
+  searchTag( tag:string ):void {
 
-//     this._tagHistory.unshift(tag)
+    this._tagHistory.unshift(tag)
 
-//     // console.log(this._tagHistory);
+    // console.log(this._tagHistory);
 
-//   }
+  }
 
-// }
+}
