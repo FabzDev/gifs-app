@@ -26,6 +26,11 @@ export class GifsService {
     this._tagHistory.unshift(tag)
 
     this._tagHistory = this._tagHistory.splice(0,10)
+    this.saveTagHistory()
+  }
+
+  saveTagHistory(): void{
+    localStorage.setItem('history', JSON.stringify(this._tagHistory))
   }
 
   searchTag( tag: string ): void {
