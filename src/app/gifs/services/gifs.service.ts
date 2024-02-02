@@ -40,14 +40,8 @@ export class GifsService {
     this.http.get<SearchResponse>( `${gifsUrlService}/search`, { params: httpParams } )
     .subscribe( resp => {
       this.gifList = resp.data
-
-      console.log(this.gifList);
     }) // { params: httpParams } podria ser solo { params } si httpParams se llamara params
 
-    // fetch('https://api.giphy.com/v1/gifs/search?api_key=ybboGP7QGwVdJvwi4E1x2Yc22tVgYqhS&q=palestine&limit=10')
-    // .then(resp => resp.json())
-    // .then(data => console.log(data)
-    // )
   }
 
 }
