@@ -10,10 +10,15 @@ export class SidebarComponent {
 
   constructor(private gifsService: GifsService) {}
 
-  get sidebarService(){
+  get sidebarService(): GifsService {
     return this.gifsService
   }
 
+  searchHistory(tag: string): void {
+    console.log('CLICK');
+
+    this.gifsService.searchTag(tag)
+  }
 
 
 }

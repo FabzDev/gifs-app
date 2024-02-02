@@ -40,7 +40,7 @@ export class GifsService {
     this.http.get<SearchResponse>( `${gifsUrlService}/search`, { params: httpParams } )
     .subscribe( resp => {
       this.gifList = resp.data
-    }) // { params: httpParams } podria ser solo { params } si httpParams se llamara params
+    })
 
   }
 
