@@ -13,8 +13,6 @@ export class CardListComponent {
   @Input()
   g: Gif[] = []
 
-  @Input()
-  public pais_Chijo!: string
 
 
 }
