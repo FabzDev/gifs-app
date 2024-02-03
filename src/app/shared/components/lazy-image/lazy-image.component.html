@@ -1,0 +1,14 @@
+<img
+  [src]="url"
+  [alt]="title"
+  class="card-img-top"
+  (load)="imgLoaded()"
+  [ngStyle]="{'display': hasLoaded ? '' : 'none'}"
+  >
+
+<img
+  *ngIf="!hasLoaded"
+  src="assets/loader.svg"
+  class="pt-3"
+  >
+
