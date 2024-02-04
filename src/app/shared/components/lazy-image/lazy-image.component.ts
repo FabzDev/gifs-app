@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { timeout } from 'rxjs';
 
 @Component({
   selector: 'shared-lazy-image',
@@ -19,8 +20,7 @@ export class LazyImageComponent implements OnInit{
   }
 
   imgLoaded(){
-    console.log('Image loaded');
-    this.hasLoaded = true
+      this.hasLoaded = true
   }
 
 
